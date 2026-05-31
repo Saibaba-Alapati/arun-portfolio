@@ -69,7 +69,7 @@ export default function Hero() {
 
       {/* Content */}
       <div
-        className="wrap"
+        className="wrap hero-g"
         style={{
           width: "100%",
           display: "grid",
@@ -116,7 +116,7 @@ export default function Hero() {
 
         {/* Right — photo */}
         <div
-          className="r hero-r d2"
+          className="r hero-r d2 hero-photo"
           style={{
             borderRadius: "6px", overflow: "hidden",
             background: "var(--lift)", border: "1px solid var(--bd)",

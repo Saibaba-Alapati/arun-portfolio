@@ -22,11 +22,13 @@ export default function BehindWork() {
 
         {/* Photos + copy */}
         <div
+          className="btw-g"
           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", marginBottom: "96px", alignItems: "start" }}
         >
           {/* Photos grid */}
           <ScrollReveal>
             <div
+              className="btw-photos"
               style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "260px 180px", gap: "8px" }}
             >
               <div className="mbox" style={{ gridRow: "1/3", position: "relative" }}>
@@ -65,7 +67,7 @@ export default function BehindWork() {
         />
 
         {/* Why Scapia */}
-        <div style={{ display: "grid", gridTemplateColumns: "340px 1fr", gap: "96px", alignItems: "start" }}>
+        <div className="btw-why" style={{ display: "grid", gridTemplateColumns: "340px 1fr", gap: "96px", alignItems: "start" }}>
           <div>
             <ScrollReveal>
               <div

@@ -285,30 +285,145 @@ body::after {
 .hover-cream:hover { color: var(--cream) !important; }
 
 /* ─────────────────────────────────
-   RESPONSIVE
+   RESPONSIVE — Tablet  ≤ 900px
 ───────────────────────────────── */
-@media (max-width: 940px) {
+@media (max-width: 900px) {
+  /* Cursor */
   body { cursor: auto; }
   .cur { display: none; }
-  #nav { padding: 18px 24px; }
-  .wrap { padding: 0 24px; }
+  a { cursor: auto; }
 
-  .hw { grid-template-columns: 1fr !important; gap: 32px !important; padding-top: 40px !important; }
-  .hero-photo { max-width: 100%; aspect-ratio: 4/3; }
-  .bpass { display: none; }
+  /* Nav */
+  #nav { padding: 18px 28px; }
 
+  /* Layout */
+  .wrap { padding: 0 28px; }
+
+  /* Hero */
+  .hero-g {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding-top: 100px !important;
+    padding-bottom: 64px;
+  }
+  .hero-photo {
+    order: -1;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 3/4;
+  }
+  .bpass { font-size: 9px; }
+
+  /* About */
+  .lens-g { grid-template-columns: 1fr !important; gap: 48px !important; }
+
+  /* Section padding */
+  #s2, #s3, #s6, .sec-main { padding: 80px 0 !important; }
+
+  /* Recent Works */
+  .rw-hd { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .rw-grid { grid-template-columns: 1fr 1fr !important; gap: 28px 20px !important; }
+
+  /* Behind the Work */
+  .btw-g { grid-template-columns: 1fr !important; gap: 48px !important; }
+  .btw-why { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .btw-photos { grid-template-rows: 220px 160px !important; }
+
+  /* Framework grid */
   .fw { grid-template-columns: 1fr !important; }
   .fwc { grid-column: auto !important; }
 
+  /* Brand strip */
   .bstrip { flex-wrap: wrap; gap: 6px; }
   .bsep { display: none; }
-  .bcat { display: none; }
-  .ext-tag { margin-left: 0; }
 
+  /* Case study header */
   .cs-hd { grid-template-columns: 1fr !important; gap: 28px !important; }
-  .lens-g { grid-template-columns: 1fr !important; gap: 48px !important; }
 
-  .foot-bar { padding: 40px 24px; }
+  /* Case study images */
+  .cs-imgs { grid-template-columns: 1fr 1fr !important; }
+  .cs-imgs-2 { grid-template-columns: 1fr 1fr !important; }
+
+  /* Projects page */
+  .proj-grid { grid-template-columns: 1fr 1fr !important; gap: 40px 24px !important; }
+
+  /* Footer */
+  .foot-bar { padding: 40px 28px; }
   .foot { flex-direction: column; gap: 20px; text-align: center; }
   .foot-links { justify-content: center; }
+}
+
+/* ─────────────────────────────────
+   RESPONSIVE — Mobile  ≤ 600px
+───────────────────────────────── */
+@media (max-width: 600px) {
+  /* Layout */
+  .wrap { padding: 0 20px; }
+  #nav { padding: 16px 20px; }
+
+  /* Hero */
+  .hero-g { padding-top: 88px !important; gap: 32px !important; }
+  .hero-photo { max-width: 100%; }
+  .bpass { display: none; }
+  .hero-roles { gap: 10px; }
+  .h1 { margin-bottom: 18px; }
+
+  /* Section padding */
+  #s2, #s3, #s6, .sec-main { padding: 64px 0 !important; }
+
+  /* About stats */
+  .sn { font-size: 36px; }
+
+  /* Beliefs */
+  .beliefs { padding-top: 56px; }
+  .blft { font-size: clamp(20px, 6vw, 32px); }
+
+  /* Recent Works — single column on mobile */
+  .rw-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+
+  /* Project card title smaller */
+  .pcard-title { font-size: 22px; }
+
+  /* Projects page — single column */
+  .proj-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+
+  /* Behind the Work photos: simpler layout */
+  .btw-photos {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  .btw-photos .mbox { height: 220px !important; grid-row: auto !important; }
+
+  /* Framework cards */
+  .fwc { padding: 24px 20px; }
+
+  /* Case study images — single column */
+  .cs-imgs { grid-template-columns: 1fr !important; }
+  .cs-imgs-2 { grid-template-columns: 1fr !important; }
+  .cs-imgs .mbox { height: 200px !important; }
+
+  /* Stat highlight boxes — stack */
+  .stat-hi { padding: 18px 20px; }
+  .shin { font-size: 28px; }
+
+  /* Learning card */
+  .lcard { padding: 28px 24px; }
+
+  /* Context box */
+  .ctx { padding: 18px 20px; }
+
+  /* Campaign link */
+  .camp-link { font-size: 9px; padding: 11px 14px; }
+
+  /* Brand strip */
+  .bcat { display: none; }
+  .ext-tag { margin-left: 0; font-size: 8px; }
+
+  /* Next project */
+  .next-proj-title { font-size: clamp(22px, 6vw, 36px) !important; }
+
+  /* Footer */
+  .foot-bar { padding: 32px 20px; }
+  .foot-copy { font-size: 10px; }
 }

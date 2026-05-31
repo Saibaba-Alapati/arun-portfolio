@@ -6,6 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 export default function RecentWorks() {
   return (
     <section
+      id="s3"
       style={{
         padding: "120px 0",
         background: "var(--navy)",
@@ -29,7 +30,7 @@ export default function RecentWorks() {
       <div className="wrap">
         <ScrollReveal className="stag">Recent Work</ScrollReveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", marginBottom: "16px", alignItems: "end" }}>
+        <div className="rw-hd" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", marginBottom: "16px", alignItems: "end" }}>
           <ScrollReveal className="sh d1" tag="h2" style={{ fontSize: "clamp(28px,3.8vw,50px)" }}>
             Stories I helped<br />
             brands <em>tell well.</em>
@@ -42,6 +43,7 @@ export default function RecentWorks() {
 
         {/* 2×2 project grid */}
         <div
+          className="rw-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",

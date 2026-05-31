@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <section style={{ minHeight: "100vh", padding: "120px 0", background: "var(--ink)" }}>
+    <section className="sec-main" style={{ minHeight: "100vh", padding: "120px 0", background: "var(--ink)" }}>
       <div className="wrap">
         {/* Header */}
         <div style={{ marginBottom: "72px", paddingTop: "20px" }}>
@@ -32,7 +32,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* 2-column grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px 40px" }}>
+        <div className="proj-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px 40px" }}>
           {projects.map((project, i) => (
             <Link key={project.slug} href={`/projects/${project.slug}`} className="pcard">
               <div className="pcard-thumb" style={{ aspectRatio: "4/3", position: "relative" }}>

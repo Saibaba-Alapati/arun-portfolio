@@ -29,6 +29,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <section
+      className="sec-main"
       style={{
         minHeight: "100vh", padding: "120px 0",
         background: bg, position: "relative", overflow: "hidden",
@@ -136,7 +137,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* Images */}
         <ScrollReveal
-          className="d3"
+          className={`d3 cs-imgs cs-imgs-${project.images.length}`}
           style={{
             display: "grid",
             gridTemplateColumns: project.images.length === 3 ? "1fr 1fr 1fr" : "1fr 1fr",
@@ -153,7 +154,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {/* Stats */}
         {project.stats && project.stats.length > 0 && (
-          <ScrollReveal style={{ display: "flex", gap: "16px", margin: "0 0 40px" }}>
+          <ScrollReveal style={{ display: "flex", flexWrap: "wrap", gap: "16px", margin: "0 0 40px" }}>
             {project.stats.map((s) => (
               <div key={s.label} className="stat-hi" style={{ flex: 1 }}>
                 <div className="shin">{s.value}</div>
